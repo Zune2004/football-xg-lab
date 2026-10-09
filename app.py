@@ -46,6 +46,30 @@ def predict(features):
     return float((gbm.predict(x)[0] + p_lr) / 2)
 
 
+GROUPS = {   # the 29 model features in plain language, for "why this number"
+    "Distance": ["distance", "log_distance"], "Angle to goal": ["angle"],
+    "Header / body part": ["is_header", "is_other_body", "header_x_distance"],
+    "Technique": ["tech_volley", "tech_half_volley", "tech_lob", "tech_overhead_kick", "tech_backheel", "tech_diving_header"],
+    "Situation": ["first_time", "under_pressure", "one_on_one", "from_counter", "from_set_piece", "is_free_kick"],
+    "Assist type": ["assisted", "assist_cross", "assist_through_ball", "assist_cut_back", "assist_high"],
+    "Defenders in the way": ["defenders_in_cone", "opponents_close"],
+    "Goalkeeper position": ["gk_dist_to_goal", "gk_dist_to_shot", "gk_in_cone", "gk_missing"],
+}
+
+
+def explain(features):
+    """Each factor's push on this shot vs an average shot, in log-odds, averaged over both halves of the model:
+    LightGBM's exact SHAP contributions and the logistic regression's coefficient x standardised value."""
+    gbm, lr = load_models()
+    names = lr["features"]
+    x = np.array([[float(features[f]) for f in names]])
+    shap = gbm.predict(x, pred_contrib=True)[0][:-1]          # last entry is the baseline
+    z = (x[0] - np.array(lr["mean"])) / np.array(lr["std"])
+    linear = z * np.array(lr["coef"])
+    contrib = dict(zip(names, (shap + linear) / 2))
+    return pd.Series({g: sum(contrib[f] for f in fs) for g, fs in GROUPS.items()}).sort_values()
+
+
 def pitch(fig, height=560):
     line = dict(color="rgba(229,233,240,.45)", width=1.5)
     shapes = [dict(type="rect", x0=0, y0=60, x1=80, y1=120, line=line, fillcolor="#0F2A1D", layer="below"),
@@ -250,6 +274,18 @@ with tab_calc:
         fig.add_trace(go.Scatter(x=[gk[1]], y=[gk[0]], mode="markers", marker=dict(size=14, color=ui.ROSE, symbol="square"),
                                  name="Goalkeeper", hoverinfo="skip"))
         st.plotly_chart(pitch(fig, 520), width="stretch")
+    st.markdown("#### Why this number?")
+    why = explain(f)
+    why = why[why.abs() > 0.02]
+    fig = go.Figure(go.Bar(x=why.values, y=why.index, orientation="h",
+                           marker=dict(color=np.where(why.values > 0, ui.GREEN, ui.ROSE)),
+                           text=["raises the chance" if v > 0 else "lowers the chance" for v in why.values],
+                           textposition="auto", textfont=dict(color=ui.TEXT), hovertemplate="%{y}: %{x:+.2f}<extra></extra>"))
+    fig.update_layout(height=60 + 42 * len(why), margin=dict(l=10, r=10, t=10, b=10),
+                      xaxis=dict(title="push compared with an average shot (log-odds)", zeroline=True, zerolinecolor=ui.MUTED))
+    st.plotly_chart(fig, width="stretch")
+    st.caption("Each bar is how much that factor moved this shot's chance above or below an average shot "
+               "(exact contributions from both halves of the model, averaged). Longer bar = bigger effect.")
 
 # ---------------------------------------------------------------- how good is it
 with tab_test:
