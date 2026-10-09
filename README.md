@@ -2,7 +2,13 @@
 
 An expected-goals (xG) model built only from free data. It was trained on every shot of the 2015/16 Premier League, La Liga, Serie A and Ligue 1 (37,881 shots), then tested on recent major tournaments it never saw. On those tournaments it **matches StatsBomb's commercial xG model to within about 0.005 log loss**.
 
-**Interactive app:** shot maps, an xG calculator and finishing over- and under-performers. Run it with `streamlit run app.py`; it's deployed on Streamlit Community Cloud.
+### ▶ [Open the live app: xg-lab-football.streamlit.app](https://xg-lab-football.streamlit.app/)
+
+![This season: who's creating chances and who's riding luck](assets/season.png)
+
+| Tournament shot maps & finishing | xG calculator, with *why* the number is what it is |
+|---|---|
+| ![tournaments](assets/tournaments.png) | ![calculator](assets/calculator.png) |
 
 ## This season (2026/27): xG-lite for the top-5 leagues
 
