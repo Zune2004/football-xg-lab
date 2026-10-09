@@ -12,6 +12,7 @@ No free, permitted source has current shot-by-shot xG, so the app estimates it. 
 - **Validation:** on WC 2022, Euro 2024 and Copa 2024, team xG-lite totals correlate **0.96** with full xG and predict goals almost as well (r = 0.754 vs 0.784).
 - **Update cadence:** a daily GitHub Action (`xg/season_fetch.py`) adds new matches.
 - **Limitation:** the Champions League has no free shot data.
+- **Real xG upgrade:** [Highlightly](https://highlightly.net)'s free plan (100 requests/day) includes **real match xG**, expected assists, big chances and possession for the top-5 leagues and the Champions League. `xg/hl_fetch.py` collects it daily within the quota, and each league's table switches from xG-lite to real xG once 90% of its finished matches are in. Sources are never mixed within one table.
 
 ## Out-of-sample test: recent tournaments
 

@@ -60,40 +60,67 @@ tab_now, tab_test, tab_map, tab_calc, tab_perf = st.tabs(["This season", "How go
                                                          "xG calculator", "Finishing"])
 
 with tab_now:
-    season_file = Path(__file__).parent / "xg" / "season" / "matches.csv"
+    season_dir = Path(__file__).parent / "xg" / "season"
     st.subheader("2026/27 so far: who's creating chances, and who's riding luck?")
-    if not season_file.exists():
+    lite = pd.read_csv(season_dir / "matches.csv") if (season_dir / "matches.csv").exists() else pd.DataFrame()
+    real = pd.read_csv(season_dir / "hl_matches.csv") if (season_dir / "hl_matches.csv").exists() else pd.DataFrame()
+    index = json.loads((season_dir / "hl_index.json").read_text()) if (season_dir / "hl_index.json").exists() else {}
+    finished = {lg: sum(m["state"] == "Finished" for m in e["matches"]) for lg, e in index.items()}
+    have = real.dropna(subset=["home_xg"]).groupby("league").size().to_dict() if len(real) else {}
+    REAL_MIN = 0.9   # use real xG for a league once it covers 90% of finished matches; never mix sources in one table
+    leagues = sorted(set(lite.league if len(lite) else []) | set(finished))
+    if not leagues:
         st.info("Season data is being collected; check back soon.")
     else:
-        sm = pd.read_csv(season_file)
-        league = st.selectbox("League", sorted(sm.league.unique()))
-        lg = sm[sm.league == league]
-        rows = pd.concat([
-            lg.assign(team=lg.home, gf=lg.home_goals, ga=lg.away_goals, xgf=lg.home_xg_lite, xga=lg.away_xg_lite),
-            lg.assign(team=lg.away, gf=lg.away_goals, ga=lg.home_goals, xgf=lg.away_xg_lite, xga=lg.home_xg_lite)])
-        full = rows[rows.complete == 1]   # like-for-like: only matches with the full inside/outside shot split
-        tab = rows.groupby("team").agg(P=("gf", "size"), GF=("gf", "sum"), GA=("ga", "sum"))
-        per = full.groupby("team").agg(n=("gf", "size"), gf=("gf", "sum"), ga=("ga", "sum"), xgf=("xgf", "sum"), xga=("xga", "sum"))
-        tab["xGF/match"] = per.xgf / per.n
-        tab["xGA/match"] = per.xga / per.n
-        tab["xG diff/match"] = tab["xGF/match"] - tab["xGA/match"]
-        tab["finishing (G - xG)"] = per.gf - per.xgf
-        tab["keeping (xGA - GA)"] = per.xga - per.ga
-        tab = tab.sort_values("xG diff/match", ascending=False).round(2)
-        st.dataframe(tab, width="stretch")
-        fig = go.Figure(go.Scatter(x=tab["xGF/match"], y=tab["xGA/match"], mode="markers+text", text=tab.index,
-                                   textposition="top center", marker=dict(size=10, color="#37003c")))
-        fig.update_layout(xaxis_title="Chances created (xG-lite for per match)", height=520,
-                          yaxis=dict(title="Chances allowed (xG-lite against per match)", autorange="reversed"),
-                          margin=dict(l=10, r=10, t=10, b=10))
-        st.plotly_chart(fig, width="stretch")
-        st.caption(f"Top right = creates a lot, allows little. {len(lg)} matches, "
-                   f"{lg.complete.mean():.0%} with the full shot split (xG columns use those only). "
-                   "Positive finishing = scoring more than the chances suggest (often regresses); positive keeping = "
-                   "conceding less than the chances suggest. "
-                   "xG-lite = 0.140 per shot inside the box + 0.034 per shot outside it, calibrated on 37,881 StatsBomb "
-                   "shots; on recent tournaments its team totals track full xG at r = 0.96. "
-                   "Match data: TheSportsDB (free API). Champions League has no free shot data, so it isn't included.")
+        league = st.selectbox("League", leagues)
+        cover = have.get(league, 0) / finished[league] if finished.get(league) else 0
+        if cover >= REAL_MIN:
+            lg = real[(real.league == league)].dropna(subset=["home_xg"])
+            source = (f"Real xG from Highlightly ({len(lg)} matches)", "xG")
+            cols = dict(xgf=("home_xg", "away_xg"), poss=("home_possession", "away_possession"),
+                        big=("home_big_chances", "away_big_chances"))
+        else:
+            lg = lite[(lite.league == league) & (lite.complete == 1)] if len(lite) else lite
+            source = (f"xG-lite from shot locations ({len(lg)} matches; real xG collected for {cover:.0%} so far)", "xG-lite")
+            cols = dict(xgf=("home_xg_lite", "away_xg_lite"))
+        if lg is None or not len(lg):
+            st.info(f"No {league} data yet (the Champions League has real xG only, which is still being collected).")
+        else:
+            def side(h, a, home):
+                d = {"team": lg.home if home else lg.away, "gf": lg.home_goals if home else lg.away_goals,
+                     "ga": lg.away_goals if home else lg.home_goals}
+                for k, (hc, ac) in cols.items():
+                    d[k] = lg[hc] if home else lg[ac]
+                    if k == "xgf":
+                        d["xga"] = lg[ac] if home else lg[hc]
+                    if k == "big":
+                        d["big_against"] = lg[ac] if home else lg[hc]
+                return pd.DataFrame(d)
+            rows = pd.concat([side(None, None, True), side(None, None, False)])
+            g = rows.groupby("team")
+            tab = g.agg(P=("gf", "size"), GF=("gf", "sum"), GA=("ga", "sum"))
+            tab[f"{source[1]} for/match"] = g.xgf.mean()
+            tab[f"{source[1]} against/match"] = g.xga.mean()
+            tab[f"{source[1]} diff/match"] = tab.iloc[:, 3] - tab.iloc[:, 4]
+            tab["finishing (G - xG)"] = g.gf.sum() - g.xgf.sum()
+            tab["keeping (xGA - GA)"] = g.xga.sum() - g.ga.sum()
+            if "poss" in cols:
+                tab["possession"] = (g.poss.mean() * 100).round(0)
+                tab["big chances for/against"] = g.big.sum().astype(int).astype(str) + " / " + g.big_against.sum().astype(int).astype(str)
+            tab = tab.sort_values(f"{source[1]} diff/match", ascending=False).round(2)
+            st.caption(source[0])
+            st.dataframe(tab, width="stretch")
+            fig = go.Figure(go.Scatter(x=tab.iloc[:, 3], y=tab.iloc[:, 4], mode="markers+text", text=tab.index,
+                                       textposition="top center", marker=dict(size=10, color="#37003c")))
+            fig.update_layout(xaxis_title=f"Chances created ({source[1]} for per match)", height=520,
+                              yaxis=dict(title=f"Chances allowed ({source[1]} against per match)", autorange="reversed"),
+                              margin=dict(l=10, r=10, t=10, b=10))
+            st.plotly_chart(fig, width="stretch")
+            st.caption("Top right = creates a lot, allows little. Positive finishing = scoring more than the chances "
+                       "suggest (often regresses); positive keeping = conceding less than the chances suggest. "
+                       "Real xG and match stats: Highlightly (free plan). xG-lite = 0.140 per shot inside the box + 0.034 "
+                       "per shot outside, calibrated on 37,881 StatsBomb shots (team totals track full xG at r = 0.96 on "
+                       "recent tournaments); shot counts: TheSportsDB (free API).")
 
 with tab_test:
     st.subheader("Tested on recent tournaments, against StatsBomb's own commercial xG")

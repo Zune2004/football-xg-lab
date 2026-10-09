@@ -1,0 +1,24 @@
+# Daily: real current-season team xG (top-5 + Champions League) from Highlightly's free plan (100 requests/day).
+# Needs the repository secret HIGHLIGHTLY_KEY. Resumes where the last run stopped.
+name: Real xG data
+on:
+  schedule:
+    - cron: "11 1 * * *"   # after the daily quota reset
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 xg/hl_fetch.py
+        env:
+          HIGHLIGHTLY_KEY: ${{ secrets.HIGHLIGHTLY_KEY }}
+      - name: Commit if changed
+        if: always()
+        run: |
+          git config user.name "xg-data"; git config user.email "xg-data@users.noreply.github.com"
+          git add xg/season/hl_index.json xg/season/hl_matches.csv
+          git diff --cached --quiet || (git commit -m "real xG data $(date -u +%F)" && git pull --rebase && git push)
