@@ -1,0 +1,32 @@
+{
+  "Copa America 2024": {
+    "shots": 741,
+    "goals": 63,
+    "our_xg": 67.4,
+    "statsbomb_xg": 66.0,
+    "our_log_loss": 0.2442,
+    "statsbomb_log_loss": 0.2405,
+    "our_auc": 0.784,
+    "statsbomb_auc": 0.79
+  },
+  "Euro 2024": {
+    "shots": 1300,
+    "goals": 98,
+    "our_xg": 115.3,
+    "statsbomb_xg": 111.4,
+    "our_log_loss": 0.2283,
+    "statsbomb_log_loss": 0.2258,
+    "our_auc": 0.78,
+    "statsbomb_auc": 0.786
+  },
+  "World Cup 2022": {
+    "shots": 1428,
+    "goals": 152,
+    "our_xg": 145.9,
+    "statsbomb_xg": 137.9,
+    "our_log_loss": 0.2677,
+    "statsbomb_log_loss": 0.2669,
+    "our_auc": 0.813,
+    "statsbomb_auc": 0.814
+  }
+}
