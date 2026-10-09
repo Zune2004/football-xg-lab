@@ -74,7 +74,11 @@ def main():
             for m in index.get(league, {}).get("matches", []):
                 if m["state"] != "Finished" or str(m["id"]) in rows or not m["score"]:
                     continue
-                st = get(f"/statistics/{m['id']}")
+                try:
+                    st = get(f"/statistics/{m['id']}")
+                except urllib.error.HTTPError as e:   # their side fails now and then: skip, retry on a later run
+                    print(f"  {league} {m['home']} v {m['away']}: HTTP {e.code}, will retry")
+                    continue
                 vals = {}
                 for side, team in zip(("home", "away"), st if isinstance(st, list) else []):
                     for x in team.get("statistics", []):
@@ -85,6 +89,8 @@ def main():
                                       "home": m["home"], "away": m["away"], "home_goals": hg, "away_goals": ag, **vals}
     except Quota:
         print(f"daily quota reached ({remaining} left); resuming next run")
+    except Exception as e:   # anything else: keep what we have
+        print(f"stopped early: {type(e).__name__}: {e}")
     with out_file.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         w.writeheader()
