@@ -1,0 +1,251 @@
+event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away_in,away_out,home_xg_lite,away_xg_lite,complete
+2508333,Bundesliga,1,2026-08-28,Bayern Munich,Stuttgart,5,1,14,7,7,4,2.2,1.12,1
+2508335,Bundesliga,1,2026-08-29,Mainz,Paderborn,0,0,15,7,6,4,2.34,0.98,1
+2508336,Bundesliga,1,2026-08-29,Borussia Dortmund,Hamburg,2,0,12,8,3,4,1.95,0.56,1
+2508338,Bundesliga,1,2026-08-29,RB Leipzig,Borussia Mönchengladbach,3,0,19,6,10,5,2.86,1.57,1
+2508339,Bundesliga,1,2026-08-29,Union Berlin,Eintracht Frankfurt,3,3,14,4,6,5,2.1,1.01,1
+2508340,Bundesliga,1,2026-08-29,Köln,Hoffenheim,3,2,13,5,8,7,1.99,1.36,1
+2508341,Bundesliga,1,2026-08-29,Elversberg,Bayer Leverkusen,3,2,8,3,13,8,1.22,2.09,1
+2508334,Bundesliga,1,2026-08-30,Freiburg,Werder Bremen,4,1,8,11,6,3,1.49,0.94,1
+2508337,Bundesliga,1,2026-08-30,Augsburg,Schalke 04,3,0,18,6,7,4,2.72,1.12,1
+2508347,Bundesliga,2,2026-09-04,Stuttgart,Köln,4,1,8,3,2,2,1.22,0.35,1
+2508342,Bundesliga,2,2026-09-05,Werder Bremen,RB Leipzig,3,1,5,7,14,5,0.94,2.13,1
+2508343,Bundesliga,2,2026-09-05,Borussia Mönchengladbach,Elversberg,3,4,19,6,10,4,2.86,1.54,1
+2508344,Bundesliga,2,2026-09-05,Hoffenheim,Borussia Dortmund,2,3,11,7,10,1,1.78,1.43,1
+2508345,Bundesliga,2,2026-09-05,Bayer Leverkusen,Union Berlin,4,0,16,5,2,3,2.41,0.38,1
+2508348,Bundesliga,2,2026-09-05,Schalke 04,Bayern Munich,0,0,3,1,10,5,0.45,1.57,1
+2508350,Bundesliga,2,2026-09-05,Paderborn,Freiburg,0,1,6,8,9,7,1.11,1.5,1
+2508346,Bundesliga,2,2026-09-06,Eintracht Frankfurt,Augsburg,1,4,17,5,9,8,2.55,1.53,1
+2508349,Bundesliga,2,2026-09-06,Hamburg,Mainz,0,5,3,5,14,3,0.59,2.06,1
+2508357,Bundesliga,3,2026-09-11,Union Berlin,Schalke 04,1,3,17,3,11,8,2.48,1.81,1
+2508351,Bundesliga,3,2026-09-12,Freiburg,Borussia Mönchengladbach,5,0,12,7,4,1,1.92,0.59,1
+2508352,Bundesliga,3,2026-09-12,Mainz,Eintracht Frankfurt,1,3,11,7,9,2,1.78,1.33,1
+2508353,Bundesliga,3,2026-09-12,Borussia Dortmund,Paderborn,3,0,10,4,5,5,1.54,0.87,1
+2508354,Bundesliga,3,2026-09-12,Hoffenheim,Stuttgart,2,1,12,8,13,3,1.95,1.92,1
+2508355,Bundesliga,3,2026-09-12,Augsburg,Bayer Leverkusen,2,2,5,3,21,9,0.8,3.25,1
+2508358,Bundesliga,3,2026-09-12,Köln,Werder Bremen,1,1,9,6,11,3,1.46,1.64,1
+2508356,Bundesliga,3,2026-09-13,RB Leipzig,Hamburg,5,0,12,7,7,3,1.92,1.08,1
+2508359,Bundesliga,3,2026-09-13,Elversberg,Bayern Munich,1,2,3,2,16,12,0.49,2.65,1
+2508360,Bundesliga,4,2026-09-18,Bayern Munich,Union Berlin,7,0,14,9,2,1,2.27,0.31,1
+2508361,Bundesliga,4,2026-09-19,Werder Bremen,Augsburg,3,2,17,3,5,2,2.48,0.77,1
+2508362,Bundesliga,4,2026-09-19,Borussia Mönchengladbach,Mainz,3,4,15,6,15,2,2.3,2.17,1
+2508364,Bundesliga,4,2026-09-19,Eintracht Frankfurt,Freiburg,2,2,9,1,17,5,1.29,2.55,1
+2508365,Bundesliga,4,2026-09-19,Stuttgart,Borussia Dortmund,0,1,8,4,10,3,1.26,1.5,1
+2508367,Bundesliga,4,2026-09-19,Hamburg,Köln,2,1,7,5,12,6,1.15,1.88,1
+2508363,Bundesliga,4,2026-09-20,Bayer Leverkusen,RB Leipzig,2,0,14,4,7,5,2.1,1.15,1
+2508366,Bundesliga,4,2026-09-20,Schalke 04,Elversberg,0,0,11,2,6,5,1.61,1.01,1
+2508368,Bundesliga,4,2026-09-20,Paderborn,Hoffenheim,3,1,7,6,16,7,1.18,2.48,1
+2506172,La Liga,1,2026-08-15,Sevilla,Rayo Vallecano,2,1,9,4,5,1,1.4,0.73,1
+2506176,La Liga,1,2026-08-15,Deportivo Alavés,Getafe,3,0,11,7,3,3,1.78,0.52,1
+2506174,La Liga,1,2026-08-16,Espanyol,Levante,3,0,9,7,2,2,1.5,0.35,1
+2506178,La Liga,1,2026-08-16,Racing de Santander,Villarreal,2,2,9,8,7,5,1.53,1.15,1
+2506177,La Liga,1,2026-08-17,Deportivo de A Coruña,Elche,1,1,2,1,3,1,0.31,0.45,1
+2506170,La Liga,1,2026-08-19,Atlético Madrid,Málaga,2,0,8,7,4,1,1.36,0.59,1
+2506171,La Liga,1,2026-08-25,Valencia,Real Betis,0,1,10,6,6,9,1.6,1.15,1
+2506175,La Liga,1,2026-08-26,Real Madrid,Real Sociedad,4,1,14,6,7,3,2.16,1.08,1
+2506169,La Liga,1,2026-08-27,Barcelona,Athletic Bilbao,2,0,18,4,2,2,2.66,0.35,1
+2506173,La Liga,1,2026-08-27,Celta Vigo,Osasuna,1,2,1,3,8,5,0.24,1.29,1
+2506187,La Liga,2,2026-08-20,Rayo Vallecano,Deportivo Alavés,1,1,5,3,10,5,0.8,1.57,1
+2506184,La Liga,2,2026-08-21,Real Betis,Real Sociedad,1,0,9,9,5,4,1.57,0.84,1
+2506180,La Liga,2,2026-08-22,Athletic Bilbao,Sevilla,1,3,11,7,4,3,1.78,0.66,1
+2506181,La Liga,2,2026-08-22,Valencia,Celta Vigo,0,0,4,3,3,4,0.66,0.56,1
+2506183,La Liga,2,2026-08-22,Espanyol,Real Madrid,1,2,4,4,14,7,0.7,2.2,1
+2506179,La Liga,2,2026-08-23,Atlético Madrid,Villarreal,2,2,6,13,10,3,1.28,1.5,1
+2506185,La Liga,2,2026-08-23,Getafe,Racing de Santander,1,0,5,7,5,1,0.94,0.73,1
+2506188,La Liga,2,2026-08-23,Elche,Barcelona,0,5,5,2,10,1,0.77,1.43,1
+2506182,La Liga,2,2026-08-24,Málaga,Deportivo de A Coruña,1,1,2,3,2,1,0.38,0.31,1
+2506186,La Liga,2,2026-08-24,Osasuna,Levante,0,0,5,3,3,2,0.8,0.49,1
+2506194,La Liga,3,2026-08-28,Deportivo Alavés,Villarreal,1,0,4,5,14,4,0.73,2.1,1
+2506198,La Liga,3,2026-08-28,Racing de Santander,Elche,3,2,9,4,9,9,1.4,1.57,1
+2506190,La Liga,3,2026-08-29,Sevilla,Atlético Madrid,1,3,12,9,9,3,1.99,1.36,1
+2506192,La Liga,3,2026-08-29,Levante,Real Betis,5,2,14,5,16,4,2.13,2.38,1
+2506196,La Liga,3,2026-08-29,Real Sociedad,Espanyol,2,1,13,4,6,5,1.96,1.01,1
+2506191,La Liga,3,2026-08-30,Celta Vigo,Athletic Bilbao,0,2,6,2,12,5,0.91,1.85,1
+2506193,La Liga,3,2026-08-30,Real Madrid,Málaga,4,0,14,5,6,8,2.13,1.11,1
+2506195,La Liga,3,2026-08-30,Deportivo de A Coruña,Valencia,3,1,5,6,7,5,0.9,1.15,1
+2506189,La Liga,3,2026-08-31,Barcelona,Rayo Vallecano,5,2,17,9,7,4,2.69,1.12,1
+2506197,La Liga,3,2026-08-31,Osasuna,Getafe,1,0,4,6,7,4,0.76,1.12,1
+2506205,La Liga,4,2026-09-04,Real Betis,Real Madrid,1,0,2,3,12,3,0.38,1.78,1
+2506199,La Liga,4,2026-09-05,Athletic Bilbao,Atlético Madrid,3,0,8,3,10,5,1.22,1.57,1
+2506201,La Liga,4,2026-09-05,Villarreal,Deportivo de A Coruña,2,3,9,8,6,2,1.53,0.91,1
+2506207,La Liga,4,2026-09-05,Rayo Vallecano,Racing de Santander,3,2,9,7,4,5,1.5,0.73,1
+2506200,La Liga,4,2026-09-06,Valencia,Barcelona,0,5,3,,19,,,,0
+2506202,La Liga,4,2026-09-06,Málaga,Levante,0,0,7,3,5,6,1.08,0.9,1
+2506203,La Liga,4,2026-09-06,Espanyol,Sevilla,1,1,7,5,3,3,1.15,0.52,1
+2506204,La Liga,4,2026-09-06,Deportivo Alavés,Osasuna,5,2,7,5,6,1,1.15,0.87,1
+2506206,La Liga,4,2026-09-07,Getafe,Celta Vigo,1,1,6,4,8,8,0.98,1.39,1
+2506208,La Liga,4,2026-09-07,Elche,Real Sociedad,2,3,15,5,8,5,2.27,1.29,1
+2506211,La Liga,5,2026-09-11,Sevilla,Valencia,1,0,9,4,1,2,1.4,0.21,1
+2506209,La Liga,5,2026-09-12,Athletic Bilbao,Elche,1,1,14,5,1,2,2.13,0.21,1
+2506214,La Liga,5,2026-09-12,Real Madrid,Rayo Vallecano,4,1,16,8,7,10,2.51,1.32,1
+2506217,La Liga,5,2026-09-12,Osasuna,Espanyol,0,2,5,6,3,3,0.9,0.52,1
+2506218,La Liga,5,2026-09-12,Racing de Santander,Deportivo Alavés,2,1,9,2,10,6,1.33,1.6,1
+2506212,La Liga,5,2026-09-13,Celta Vigo,Málaga,1,1,8,9,6,6,1.43,1.04,1
+2506213,La Liga,5,2026-09-13,Levante,Barcelona,2,4,10,3,10,2,1.5,1.47,1
+2506215,La Liga,5,2026-09-13,Getafe,Deportivo de A Coruña,1,1,8,7,9,1,1.36,1.29,1
+2506216,La Liga,5,2026-09-13,Real Sociedad,Atlético Madrid,0,3,2,6,9,4,0.48,1.4,1
+2506210,La Liga,5,2026-09-14,Villarreal,Real Betis,1,2,11,3,20,6,1.64,3.0,1
+2506226,La Liga,6,2026-09-03,Real Sociedad,Celta Vigo,0,0,6,10,3,4,1.18,0.56,1
+2506223,La Liga,6,2026-09-15,Deportivo Alavés,Valencia,0,1,11,4,5,5,1.68,0.87,1
+2506227,La Liga,6,2026-09-15,Rayo Vallecano,Espanyol,2,1,9,7,12,7,1.5,1.92,1
+2506228,La Liga,6,2026-09-15,Elche,Real Madrid,2,3,7,4,15,5,1.12,2.27,1
+2506219,La Liga,6,2026-09-16,Barcelona,Racing de Santander,7,2,23,7,5,0,3.46,0.7,1
+2506220,La Liga,6,2026-09-16,Atlético Madrid,Osasuna,4,0,19,8,3,0,2.93,0.42,1
+2506225,La Liga,6,2026-09-16,Deportivo de A Coruña,Sevilla,0,1,1,3,5,6,0.24,0.9,1
+2506221,La Liga,6,2026-09-17,Málaga,Villarreal,1,3,4,1,12,4,0.59,1.82,1
+2506224,La Liga,6,2026-09-17,Real Betis,Getafe,1,0,9,13,3,5,1.7,0.59,1
+2506235,La Liga,7,2026-09-18,Espanyol,Elche,1,3,13,10,6,3,2.16,0.94,1
+2506230,La Liga,7,2026-09-19,Athletic Bilbao,Deportivo Alavés,0,0,9,15,0,2,1.77,0.07,1
+2506233,La Liga,7,2026-09-19,Sevilla,Barcelona,1,3,3,4,12,12,0.56,2.09,1
+2506234,La Liga,7,2026-09-19,Celta Vigo,Racing de Santander,5,0,8,5,6,5,1.29,1.01,1
+2506238,La Liga,7,2026-09-19,Osasuna,Rayo Vallecano,1,1,9,1,6,13,1.29,1.28,1
+2506229,La Liga,7,2026-09-20,Atlético Madrid,Real Madrid,2,1,13,5,3,5,1.99,0.59,1
+2506231,La Liga,7,2026-09-20,Valencia,Real Sociedad,2,3,13,9,15,6,2.13,2.3,1
+2506232,La Liga,7,2026-09-20,Villarreal,Levante,3,1,13,8,6,0,2.09,0.84,1
+2506236,La Liga,7,2026-09-20,Deportivo de A Coruña,Real Betis,1,1,18,6,7,4,2.72,1.12,1
+2506237,La Liga,7,2026-09-20,Getafe,Málaga,1,0,12,8,6,5,1.95,1.01,1
+2489463,Ligue 1,1,2026-08-21,Marseille,Strasbourg,4,0,9,5,3,2,1.43,0.49,1
+2489464,Ligue 1,1,2026-08-22,Nice,Lorient,0,0,6,1,2,1,0.87,0.31,1
+2489466,Ligue 1,1,2026-08-22,Toulouse,Lyon,0,2,7,2,1,1,1.05,0.17,1
+2489467,Ligue 1,1,2026-08-22,Troyes,Paris FC,0,0,4,1,4,2,0.59,0.63,1
+2489469,Ligue 1,1,2026-08-22,Lens,Auxerre,5,2,10,2,5,5,1.47,0.87,1
+2489470,Ligue 1,1,2026-08-22,Le Mans,Brest,2,2,3,2,9,0,0.49,1.26,1
+2489462,Ligue 1,1,2026-08-23,Angers,Lille,0,2,13,7,7,4,2.06,1.12,1
+2489465,Ligue 1,1,2026-08-23,Rennes,Paris Saint-Germain,2,2,3,6,9,10,0.62,1.6,1
+2489468,Ligue 1,1,2026-08-23,Le Havre,Monaco,0,1,8,6,8,7,1.32,1.36,1
+2489479,Ligue 1,2,2026-08-28,Lille,Paris Saint-Germain,2,2,5,4,7,11,0.84,1.35,1
+2489471,Ligue 1,2,2026-08-29,Lyon,Le Havre,1,1,12,3,8,4,1.78,1.26,1
+2489474,Ligue 1,2,2026-08-29,Strasbourg,Lens,2,1,12,4,12,5,1.82,1.85,1
+2489475,Ligue 1,2,2026-08-29,Lorient,Troyes,1,2,9,6,10,1,1.46,1.43,1
+2489476,Ligue 1,2,2026-08-29,Brest,Toulouse,2,2,15,10,4,2,2.44,0.63,1
+2489477,Ligue 1,2,2026-08-29,Auxerre,Angers,1,3,9,10,11,4,1.6,1.68,1
+2489472,Ligue 1,2,2026-08-30,Monaco,Marseille,2,0,7,4,7,6,1.12,1.18,1
+2489473,Ligue 1,2,2026-08-30,Rennes,Le Mans,3,2,17,5,8,4,2.55,1.26,1
+2489478,Ligue 1,2,2026-08-30,Paris FC,Nice,3,0,10,5,9,6,1.57,1.46,1
+2489485,Ligue 1,3,2026-09-03,Toulouse,Lille,0,1,14,10,6,4,2.3,0.98,1
+2489481,Ligue 1,3,2026-09-04,Lyon,Auxerre,3,1,14,7,4,4,2.2,0.7,1
+2489484,Ligue 1,3,2026-09-04,Paris Saint-Germain,Monaco,1,2,8,15,2,2,1.63,0.35,1
+2489483,Ligue 1,3,2026-09-05,Nice,Le Mans,1,1,5,3,2,6,0.8,0.48,1
+2489487,Ligue 1,3,2026-09-05,Le Havre,Brest,1,2,13,5,12,7,1.99,1.92,1
+2489488,Ligue 1,3,2026-09-05,Lens,Lorient,0,1,10,7,5,3,1.64,0.8,1
+2489480,Ligue 1,3,2026-09-06,Angers,Rennes,1,2,12,7,15,2,1.92,2.17,1
+2489482,Ligue 1,3,2026-09-06,Marseille,Paris FC,2,3,10,4,12,6,1.54,1.88,1
+2489486,Ligue 1,3,2026-09-06,Troyes,Strasbourg,2,6,19,8,16,3,2.93,2.34,1
+2489490,Ligue 1,4,2026-09-11,Rennes,Marseille,1,0,13,7,8,5,2.06,1.29,1
+2489491,Ligue 1,4,2026-09-12,Strasbourg,Monaco,1,1,6,7,8,4,1.08,1.26,1
+2489492,Ligue 1,4,2026-09-12,Lorient,Toulouse,2,2,6,4,13,0,0.98,1.82,1
+2489494,Ligue 1,4,2026-09-12,Auxerre,Nice,1,0,11,,7,,,,0
+2489495,Ligue 1,4,2026-09-12,Le Havre,Angers,0,0,10,6,5,4,1.6,0.84,1
+2489496,Ligue 1,4,2026-09-12,Paris FC,Lyon,0,0,3,3,3,2,0.52,0.49,1
+2489489,Ligue 1,4,2026-09-13,Lille,Troyes,2,0,11,2,5,3,1.61,0.8,1
+2489493,Ligue 1,4,2026-09-13,Brest,Paris Saint-Germain,0,1,8,8,9,6,1.39,1.46,1
+2489497,Ligue 1,4,2026-09-13,Le Mans,Lens,2,2,11,2,12,4,1.61,1.82,1
+2489501,Ligue 1,5,2026-09-18,Monaco,Lens,2,1,6,3,10,2,0.94,1.47,1
+2489498,Ligue 1,5,2026-09-19,Angers,Troyes,2,0,8,4,13,6,1.26,2.02,1
+2489499,Ligue 1,5,2026-09-19,Lyon,Rennes,4,0,10,5,9,4,1.57,1.4,1
+2489502,Ligue 1,5,2026-09-19,Toulouse,Le Havre,3,2,10,4,12,6,1.54,1.88,1
+2489504,Ligue 1,5,2026-09-19,Paris FC,Strasbourg,2,1,12,5,4,1,1.85,0.59,1
+2489505,Ligue 1,5,2026-09-19,Le Mans,Lorient,2,1,6,5,6,3,1.01,0.94,1
+2489500,Ligue 1,5,2026-09-20,Nice,Lille,2,1,7,3,15,6,1.08,2.3,1
+2489503,Ligue 1,5,2026-09-20,Auxerre,Brest,2,1,3,8,3,5,0.69,0.59,1
+2489506,Ligue 1,5,2026-09-20,Marseille,Paris Saint-Germain,1,2,7,5,22,9,1.15,3.39,1
+2494000,Premier League,1,2026-08-21,Arsenal,Coventry City,3,0,10,10,1,3,1.74,0.24,1
+2494001,Premier League,1,2026-08-22,Hull City,Manchester United,2,0,5,3,15,6,0.8,2.3,1
+2494002,Premier League,1,2026-08-22,Everton,Crystal Palace,2,0,11,5,8,3,1.71,1.22,1
+2494003,Premier League,1,2026-08-22,Ipswich Town,Sunderland,2,1,8,2,5,6,1.19,0.9,1
+2494004,Premier League,1,2026-08-22,Nottingham Forest,Leeds United,0,1,6,6,6,5,1.04,1.01,1
+2494005,Premier League,1,2026-08-22,Brentford,Tottenham Hotspur,3,0,20,6,4,5,3.0,0.73,1
+2494006,Premier League,1,2026-08-23,Manchester City,Bournemouth,2,1,11,2,4,1,1.61,0.59,1
+2494007,Premier League,1,2026-08-23,Brighton and Hove Albion,Aston Villa,4,0,15,6,2,4,2.3,0.42,1
+2494008,Premier League,1,2026-08-23,Newcastle United,Liverpool,2,2,6,7,16,11,1.08,2.61,1
+2494009,Premier League,1,2026-08-24,Fulham,Chelsea,2,3,4,3,9,3,0.66,1.36,1
+2494015,Premier League,2,2026-08-28,Crystal Palace,Manchester City,1,4,6,3,12,6,0.94,1.88,1
+2494011,Premier League,2,2026-08-29,Bournemouth,Everton,1,1,13,4,7,6,1.96,1.18,1
+2494012,Premier League,2,2026-08-29,Liverpool,Nottingham Forest,2,2,8,5,11,1,1.29,1.57,1
+2494013,Premier League,2,2026-08-29,Tottenham Hotspur,Newcastle United,0,2,10,7,7,4,1.64,1.12,1
+2494019,Premier League,2,2026-08-29,Coventry City,Hull City,0,1,7,4,2,3,1.12,0.38,1
+2494010,Premier League,2,2026-08-30,Manchester United,Ipswich Town,5,2,19,14,6,3,3.14,0.94,1
+2494014,Premier League,2,2026-08-30,Chelsea,Brighton and Hove Albion,4,3,15,2,13,2,2.17,1.89,1
+2494016,Premier League,2,2026-08-30,Leeds United,Brentford,1,1,6,7,18,4,1.08,2.66,1
+2494018,Premier League,2,2026-08-30,Sunderland,Fulham,1,0,9,3,5,4,1.36,0.84,1
+2494017,Premier League,2,2026-08-31,Aston Villa,Arsenal,0,1,3,4,5,2,0.56,0.77,1
+2494027,Premier League,3,2026-09-04,Ipswich Town,Liverpool,0,2,4,4,4,5,0.7,0.73,1
+2494020,Premier League,3,2026-09-05,Newcastle United,Bournemouth,2,2,5,3,9,8,0.8,1.53,1
+2494021,Premier League,3,2026-09-05,Fulham,Crystal Palace,2,3,22,3,7,3,3.18,1.08,1
+2494024,Premier League,3,2026-09-05,Manchester City,Coventry City,1,0,14,1,8,4,1.99,1.26,1
+2494025,Premier League,3,2026-09-05,Brighton and Hove Albion,Leeds United,1,1,11,9,10,0,1.85,1.4,1
+2494026,Premier League,3,2026-09-05,Brentford,Sunderland,1,1,7,5,10,4,1.15,1.54,1
+2494028,Premier League,3,2026-09-05,Hull City,Aston Villa,0,0,4,7,10,3,0.8,1.5,1
+2494029,Premier League,3,2026-09-05,Nottingham Forest,Tottenham Hotspur,0,0,5,7,8,3,0.94,1.22,1
+2494022,Premier League,3,2026-09-06,Arsenal,Chelsea,2,1,13,3,5,8,1.92,0.97,1
+2494023,Premier League,3,2026-09-06,Everton,Manchester United,2,2,14,4,6,8,2.1,1.11,1
+2494031,Premier League,4,2026-09-12,Bournemouth,Brentford,2,2,11,9,6,2,1.85,0.91,1
+2494032,Premier League,4,2026-09-12,Liverpool,Fulham,0,0,9,5,8,2,1.43,1.19,1
+2494033,Premier League,4,2026-09-12,Tottenham Hotspur,Everton,0,0,8,6,9,3,1.32,1.36,1
+2494034,Premier League,4,2026-09-12,Chelsea,Hull City,2,2,6,6,9,4,1.04,1.4,1
+2494035,Premier League,4,2026-09-12,Crystal Palace,Ipswich Town,2,3,9,2,8,4,1.33,1.26,1
+2494037,Premier League,4,2026-09-12,Aston Villa,Nottingham Forest,1,2,6,1,14,8,0.87,2.23,1
+2494038,Premier League,4,2026-09-12,Sunderland,Arsenal,0,2,7,5,8,3,1.15,1.22,1
+2494030,Premier League,4,2026-09-13,Manchester United,Manchester City,0,1,6,10,2,4,1.18,0.42,1
+2494039,Premier League,4,2026-09-13,Coventry City,Brighton and Hove Albion,0,5,12,2,14,8,1.75,2.23,1
+2494036,Premier League,4,2026-09-14,Leeds United,Newcastle United,4,1,10,5,4,3,1.57,0.66,1
+2494047,Premier League,5,2026-09-18,Brentford,Chelsea,3,0,9,4,8,4,1.4,1.26,1
+2494040,Premier League,5,2026-09-19,Newcastle United,Hull City,2,1,9,3,12,10,1.36,2.02,1
+2494043,Premier League,5,2026-09-19,Everton,Ipswich Town,1,0,13,8,9,4,2.09,1.4,1
+2494044,Premier League,5,2026-09-19,Tottenham Hotspur,Aston Villa,2,3,12,8,9,6,1.95,1.46,1
+2494046,Premier League,5,2026-09-19,Brighton and Hove Albion,Arsenal,3,0,10,7,10,1,1.64,1.43,1
+2494049,Premier League,5,2026-09-19,Nottingham Forest,Coventry City,0,1,12,12,5,5,2.09,0.87,1
+2494041,Premier League,5,2026-09-20,Bournemouth,Liverpool,0,1,5,4,7,5,0.84,1.15,1
+2494042,Premier League,5,2026-09-20,Fulham,Manchester United,1,1,11,1,17,12,1.57,2.79,1
+2494045,Premier League,5,2026-09-20,Manchester City,Sunderland,5,3,12,4,14,3,1.82,2.06,1
+2494048,Premier League,5,2026-09-20,Leeds United,Crystal Palace,0,0,9,4,4,8,1.4,0.83,1
+2482138,Serie A,1,2026-08-22,Udinese,Como,1,1,10,6,13,7,1.6,2.06,1
+2482139,Serie A,1,2026-08-22,Genoa,Napoli,0,2,6,3,0,5,0.94,0.17,1
+2482144,Serie A,1,2026-08-22,Inter Milan,Monza,4,1,10,3,6,1,1.5,0.87,1
+2482147,Serie A,1,2026-08-22,Parma,Cagliari,0,1,2,3,4,1,0.38,0.59,1
+2482141,Serie A,1,2026-08-23,Atalanta,Sassuolo,2,1,8,6,12,10,1.32,2.02,1
+2482143,Serie A,1,2026-08-23,Torino,AC Milan,1,2,7,1,19,0,1.01,2.66,1
+2482145,Serie A,1,2026-08-23,Frosinone,Juventus,0,1,7,4,13,7,1.12,2.06,1
+2482146,Serie A,1,2026-08-23,Venezia,Lecce,0,2,12,7,7,5,1.92,1.15,1
+2482140,Serie A,1,2026-08-24,Roma,Fiorentina,4,0,13,4,3,6,1.96,0.62,1
+2482142,Serie A,1,2026-08-24,Bologna,Lazio,0,1,4,0,2,2,0.56,0.35,1
+2482150,Serie A,2,2026-08-28,AC Milan,Venezia,2,0,11,5,7,2,1.71,1.05,1
+2482149,Serie A,2,2026-08-29,Sassuolo,Torino,2,1,11,8,8,2,1.81,1.19,1
+2482153,Serie A,2,2026-08-29,Juventus,Parma,2,0,10,11,3,1,1.77,0.45,1
+2482155,Serie A,2,2026-08-29,Fiorentina,Frosinone,0,3,14,11,10,2,2.33,1.47,1
+2482157,Serie A,2,2026-08-29,Monza,Udinese,2,3,10,4,10,2,1.54,1.47,1
+2482148,Serie A,2,2026-08-30,Lazio,Genoa,1,0,8,7,5,3,1.36,0.8,1
+2482151,Serie A,2,2026-08-30,Cagliari,Inter Milan,0,1,5,5,24,6,0.87,3.56,1
+2482152,Serie A,2,2026-08-30,Napoli,Como,1,2,9,4,13,8,1.4,2.09,1
+2482154,Serie A,2,2026-08-31,Atalanta,Bologna,1,0,3,3,10,6,0.52,1.6,1
+2482156,Serie A,2,2026-08-31,Lecce,Roma,0,4,3,4,10,5,0.56,1.57,1
+2482160,Serie A,3,2026-09-04,Genoa,Como,1,4,2,2,5,9,0.35,1.01,1
+2482162,Serie A,3,2026-09-05,Roma,Atalanta,2,1,28,11,6,0,4.29,0.84,1
+2482164,Serie A,3,2026-09-05,Fiorentina,Torino,1,2,10,4,3,4,1.54,0.56,1
+2482165,Serie A,3,2026-09-05,Inter Milan,Napoli,3,2,20,9,13,3,3.11,1.92,1
+2482161,Serie A,3,2026-09-06,Juventus,AC Milan,1,1,6,8,1,2,1.11,0.21,1
+2482163,Serie A,3,2026-09-06,Bologna,Sassuolo,2,2,14,7,9,6,2.2,1.46,1
+2482166,Serie A,3,2026-09-06,Frosinone,Venezia,3,2,9,4,9,6,1.4,1.46,1
+2482167,Serie A,3,2026-09-06,Parma,Monza,1,1,7,,13,,,,0
+2482158,Serie A,3,2026-09-07,Cagliari,Lecce,1,0,12,8,4,6,1.95,0.76,1
+2482159,Serie A,3,2026-09-07,Udinese,Lazio,1,2,6,4,10,9,0.98,1.71,1
+2482175,Serie A,4,2026-09-11,Venezia,Fiorentina,2,4,9,2,15,4,1.33,2.24,1
+2482168,Serie A,4,2026-09-12,Lazio,AC Milan,2,2,7,1,11,5,1.01,1.71,1
+2482171,Serie A,4,2026-09-12,Genoa,Frosinone,1,1,12,5,16,11,1.85,2.61,1
+2482172,Serie A,4,2026-09-12,Atalanta,Cagliari,1,2,13,9,3,2,2.13,0.49,1
+2482169,Serie A,4,2026-09-13,Sassuolo,Juventus,3,2,6,4,11,7,0.98,1.78,1
+2482170,Serie A,4,2026-09-13,Napoli,Bologna,1,0,12,3,2,3,1.78,0.38,1
+2482176,Serie A,4,2026-09-13,Lecce,Monza,3,2,6,1,14,5,0.87,2.13,1
+2482173,Serie A,4,2026-09-14,Torino,Roma,0,2,3,4,12,2,0.56,1.75,1
+2482174,Serie A,4,2026-09-14,Inter Milan,Udinese,5,3,17,10,5,1,2.72,0.73,1
+2482177,Serie A,4,2026-09-14,Como,Parma,2,1,24,4,7,5,3.5,1.15,1
+2482187,Serie A,5,2026-09-18,Monza,Sassuolo,2,1,8,7,13,7,1.36,2.06,1
+2482179,Serie A,5,2026-09-19,Udinese,Cagliari,0,1,17,9,3,2,2.69,0.49,1
+2482181,Serie A,5,2026-09-19,Roma,Inter Milan,2,2,12,6,11,5,1.88,1.71,1
+2482182,Serie A,5,2026-09-19,Bologna,Torino,1,1,8,3,6,8,1.22,1.11,1
+2482185,Serie A,5,2026-09-19,Venezia,Lazio,0,2,10,7,5,6,1.64,0.9,1
+2482178,Serie A,5,2026-09-20,AC Milan,Lecce,3,0,8,2,4,2,1.19,0.63,1
+2482180,Serie A,5,2026-09-20,Juventus,Atalanta,2,0,10,4,7,4,1.54,1.12,1
+2482183,Serie A,5,2026-09-20,Fiorentina,Napoli,1,1,10,7,11,2,1.64,1.61,1
+2482184,Serie A,5,2026-09-20,Frosinone,Como,2,0,15,7,16,11,2.34,2.61,1
+2482186,Serie A,5,2026-09-20,Parma,Genoa,2,1,3,2,7,5,0.49,1.15,1

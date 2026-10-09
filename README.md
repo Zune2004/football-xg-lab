@@ -4,6 +4,15 @@ An expected-goals (xG) model built only from free data. It was trained on every 
 
 **Interactive app:** shot maps, an xG calculator and finishing over- and under-performers. Run it with `streamlit run app.py`; it's deployed on Streamlit Community Cloud.
 
+## This season (2026/27): xG-lite for the top-5 leagues
+
+No free, permitted source has current shot-by-shot xG, so the app estimates it. TheSportsDB's free API gives shots inside and outside the box for each match, and each zone gets the value of an average shot taken there, measured on our StatsBomb data:
+- **Weights:** 0.140 xG per inside-box shot and 0.034 per outside-box shot.
+- **Stability:** recent tournaments gave nearly the same values (0.135 / 0.032).
+- **Validation:** on WC 2022, Euro 2024 and Copa 2024, team xG-lite totals correlate **0.96** with full xG and predict goals almost as well (r = 0.754 vs 0.784).
+- **Update cadence:** a daily GitHub Action (`xg/season_fetch.py`) adds new matches.
+- **Limitation:** the Champions League has no free shot data.
+
 ## Out-of-sample test: recent tournaments
 
 | Tournament | Shots | Goals | Our xG | StatsBomb xG | Log loss, ours / StatsBomb (↓) | AUC, ours / StatsBomb (↑) |
@@ -46,6 +55,6 @@ streamlit run app.py
 
 ## Data
 
-Data provided by [StatsBomb Open Data](https://github.com/statsbomb/open-data). Only small derived tables (per-shot xG for the three tournaments) are included here; raw data is downloaded by `statsbomb.py`.
+Data provided by [StatsBomb Open Data](https://github.com/statsbomb/open-data). Current-season match data: [TheSportsDB](https://www.thesportsdb.com) free API. Only small derived tables (per-shot xG for the three tournaments) are included here; raw data is downloaded by `statsbomb.py`.
 
 Why no current club season? In 2026 there's no free source of current shot-level xG that permits automated access: Understat and FotMob disallow bots, and FBref lost its xG in January 2026. StatsBomb's tournaments are the newest free, permitted shot data.

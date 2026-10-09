@@ -56,7 +56,44 @@ st.title("xG Lab")
 st.caption("An expected-goals model trained on every shot of the 2015/16 Premier League, La Liga, Serie A and Ligue 1, "
            "then tested on tournaments it never saw. Data: StatsBomb Open Data.")
 
-tab_test, tab_map, tab_calc, tab_perf = st.tabs(["How good is it?", "Shot maps", "xG calculator", "Finishing"])
+tab_now, tab_test, tab_map, tab_calc, tab_perf = st.tabs(["This season", "How good is it?", "Shot maps",
+                                                         "xG calculator", "Finishing"])
+
+with tab_now:
+    season_file = Path(__file__).parent / "xg" / "season" / "matches.csv"
+    st.subheader("2026/27 so far: who's creating chances, and who's riding luck?")
+    if not season_file.exists():
+        st.info("Season data is being collected; check back soon.")
+    else:
+        sm = pd.read_csv(season_file)
+        league = st.selectbox("League", sorted(sm.league.unique()))
+        lg = sm[sm.league == league]
+        rows = pd.concat([
+            lg.assign(team=lg.home, gf=lg.home_goals, ga=lg.away_goals, xgf=lg.home_xg_lite, xga=lg.away_xg_lite),
+            lg.assign(team=lg.away, gf=lg.away_goals, ga=lg.home_goals, xgf=lg.away_xg_lite, xga=lg.home_xg_lite)])
+        full = rows[rows.complete == 1]   # like-for-like: only matches with the full inside/outside shot split
+        tab = rows.groupby("team").agg(P=("gf", "size"), GF=("gf", "sum"), GA=("ga", "sum"))
+        per = full.groupby("team").agg(n=("gf", "size"), gf=("gf", "sum"), ga=("ga", "sum"), xgf=("xgf", "sum"), xga=("xga", "sum"))
+        tab["xGF/match"] = per.xgf / per.n
+        tab["xGA/match"] = per.xga / per.n
+        tab["xG diff/match"] = tab["xGF/match"] - tab["xGA/match"]
+        tab["finishing (G - xG)"] = per.gf - per.xgf
+        tab["keeping (xGA - GA)"] = per.xga - per.ga
+        tab = tab.sort_values("xG diff/match", ascending=False).round(2)
+        st.dataframe(tab, width="stretch")
+        fig = go.Figure(go.Scatter(x=tab["xGF/match"], y=tab["xGA/match"], mode="markers+text", text=tab.index,
+                                   textposition="top center", marker=dict(size=10, color="#37003c")))
+        fig.update_layout(xaxis_title="Chances created (xG-lite for per match)", height=520,
+                          yaxis=dict(title="Chances allowed (xG-lite against per match)", autorange="reversed"),
+                          margin=dict(l=10, r=10, t=10, b=10))
+        st.plotly_chart(fig, width="stretch")
+        st.caption(f"Top right = creates a lot, allows little. {len(lg)} matches, "
+                   f"{lg.complete.mean():.0%} with the full shot split (xG columns use those only). "
+                   "Positive finishing = scoring more than the chances suggest (often regresses); positive keeping = "
+                   "conceding less than the chances suggest. "
+                   "xG-lite = 0.140 per shot inside the box + 0.034 per shot outside it, calibrated on 37,881 StatsBomb "
+                   "shots; on recent tournaments its team totals track full xG at r = 0.96. "
+                   "Match data: TheSportsDB (free API). Champions League has no free shot data, so it isn't included.")
 
 with tab_test:
     st.subheader("Tested on recent tournaments, against StatsBomb's own commercial xG")
