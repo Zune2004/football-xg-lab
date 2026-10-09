@@ -126,7 +126,11 @@ tab_now, tab_tourn, tab_calc, tab_test = st.tabs(["This season", "Tournaments", 
 with tab_now:
     leagues = [lg for lg in ["Premier League", "La Liga", "Serie A", "Bundesliga", "Ligue 1", "Champions League"]
                if lg in set(lite.league if len(lite) else []) | set(finished)]
-    league = st.segmented_control("League", leagues, default=leagues[0] if leagues else None) or (leagues[0] if leagues else None)
+    wanted = st.query_params.get("league")   # shareable links: ?league=Serie%20A
+    start = wanted if wanted in leagues else (leagues[0] if leagues else None)
+    league = st.segmented_control("League", leagues, default=start) or start
+    if league:
+        st.query_params["league"] = league
     if league is None:
         st.info("Season data is being collected; check back soon.")
     else:
@@ -182,6 +186,9 @@ with tab_now:
             if "possession" in show:
                 cfg["possession"] = st.column_config.ProgressColumn("possession %", format="%.0f", min_value=0, max_value=100)
             st.dataframe(show, width="stretch", column_config=cfg)
+            latest = pd.to_datetime(lg.date).max()
+            st.markdown(f"<div class='note'>Includes matches up to <b>{latest:%a %d %b %Y}</b> · updated daily.</div>",
+                        unsafe_allow_html=True)
             st.markdown(f"<div class='note'>{ui.esc(source)}. Finishing above zero = scoring more than the chances "
                         "suggest, which usually cools off; keeping above zero = conceding less than the chances suggest. "
                         "xG-lite: 0.140 per shot inside the box + 0.034 outside (calibrated on 37,881 StatsBomb shots; "
