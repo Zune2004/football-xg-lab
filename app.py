@@ -169,13 +169,15 @@ with tab_now:
             fig.add_vline(x=mx, line=dict(color=ui.LINE, dash="dot"))
             fig.add_hline(y=my, line=dict(color=ui.LINE, dash="dot"))
             xr, yr = (t.xg_for.min(), t.xg_for.max()), (t.xg_against.min(), t.xg_against.max())
+            pad = (yr[1] - yr[0]) * 0.08
             for x, y, txt in [(xr[1], yr[0], "DOMINANT"), (xr[0], yr[0], "SOLID, BLUNT"), (xr[1], yr[1], "OPEN GAMES"),
                               (xr[0], yr[1], "STRUGGLING")]:
                 fig.add_annotation(x=x, y=y, text=txt, showarrow=False, font=dict(color=ui.MUTED, size=11),
                                    xanchor="right" if x == xr[1] else "left", yanchor="bottom" if y == yr[0] else "top")
             fig.update_layout(height=560, margin=dict(l=10, r=10, t=10, b=10),
                               xaxis=dict(title=f"Chances created ({unit} for per match) →"),
-                              yaxis=dict(title=f"← Chances allowed ({unit} against per match)", autorange="reversed"))
+                              yaxis=dict(title=f"← Chances allowed ({unit} against per match)",
+                                         range=[yr[1] + pad, yr[0] - pad]))   # reversed; pad keeps the top label in view
             st.plotly_chart(fig, width="stretch")
             show = t.rename(columns={"xg_for": f"{unit} for", "xg_against": f"{unit} against", "xg_diff": "difference"})
             cfg = {f"{unit} for": st.column_config.ProgressColumn(format="%.2f", min_value=0, max_value=float(t.xg_for.max())),
@@ -184,7 +186,9 @@ with tab_now:
                    "finishing": st.column_config.NumberColumn("finishing (G − xG)", format="%+.1f"),
                    "keeping": st.column_config.NumberColumn("keeping (xGA − GA)", format="%+.1f")}
             if "possession" in show:
-                cfg["possession"] = st.column_config.ProgressColumn("possession %", format="%.0f", min_value=0, max_value=100)
+                cfg["possession"] = st.column_config.ProgressColumn("poss. %", format="%.0f", min_value=0, max_value=100, width="small")
+                cfg["big_for"] = st.column_config.NumberColumn("BC for", help="Big chances created", width="small")
+                cfg["big_against"] = st.column_config.NumberColumn("BC agst", help="Big chances allowed", width="small")
             st.dataframe(show, width="stretch", column_config=cfg)
             latest = pd.to_datetime(lg.date).max()
             st.markdown(f"<div class='note'>Includes matches up to <b>{latest:%a %d %b %Y}</b> · updated daily.</div>",
