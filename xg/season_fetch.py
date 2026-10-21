@@ -8,6 +8,7 @@ Run: python xg/season_fetch.py"""
 import csv
 import json
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -20,10 +21,17 @@ FIELDS = ["event_id", "league", "round", "date", "home", "away", "home_goals", "
           "home_in", "home_out", "away_in", "away_out", "home_xg_lite", "away_xg_lite", "complete"]
 
 
-def get(path):
+def get(path, wait=60):
     req = urllib.request.Request(f"{API}/{path}", headers={"User-Agent": "football-xg-lab (github.com/Zune2004/football-xg-lab)"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        out = json.load(r)
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                out = json.load(r)
+            break
+        except urllib.error.HTTPError as e:   # 429 since 2026-10-16: back off and retry instead of losing the run
+            if e.code != 429 or attempt == 4:
+                raise
+            time.sleep(int(e.headers.get("Retry-After") or wait))
     time.sleep(2.5)   # stay well under the free rate limit
     return out
 
