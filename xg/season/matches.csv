@@ -44,6 +44,15 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2508376,Bundesliga,5,2026-10-10,Paderborn,Stuttgart,0,2,16,8,16,2,2.51,2.31,1
 2508369,Bundesliga,5,2026-10-11,Freiburg,Schalke 04,2,1,7,3,5,0,1.08,0.7,1
 2508377,Bundesliga,5,2026-10-11,Köln,Borussia Mönchengladbach,2,1,13,6,7,9,2.02,1.29,1
+2508382,Bundesliga,6,2026-10-16,Eintracht Frankfurt,Köln,1,0,11,4,7,2,1.68,1.05,1
+2508378,Bundesliga,6,2026-10-17,Bayern Munich,RB Leipzig,6,1,17,12,7,5,2.79,1.15,1
+2508379,Bundesliga,6,2026-10-17,Werder Bremen,Paderborn,2,2,13,5,9,2,1.99,1.33,1
+2508383,Bundesliga,6,2026-10-17,Schalke 04,Mainz,0,1,7,2,8,2,1.05,1.19,1
+2508384,Bundesliga,6,2026-10-17,Hamburg,Stuttgart,1,0,8,6,15,9,1.32,2.41,1
+2508385,Bundesliga,6,2026-10-17,Union Berlin,Borussia Dortmund,0,0,5,6,10,2,0.9,1.47,1
+2508386,Bundesliga,6,2026-10-17,Elversberg,Augsburg,4,3,17,2,26,3,2.45,3.74,1
+2508380,Bundesliga,6,2026-10-18,Borussia Mönchengladbach,Hoffenheim,1,2,4,5,9,5,0.73,1.43,1
+2508381,Bundesliga,6,2026-10-18,Bayer Leverkusen,Freiburg,2,1,7,5,8,3,1.15,1.22,1
 2506172,La Liga,1,2026-08-15,Sevilla,Rayo Vallecano,2,1,9,4,5,1,1.4,0.73,1
 2506176,La Liga,1,2026-08-15,Deportivo Alavés,Getafe,3,0,11,7,3,3,1.78,0.52,1
 2506174,La Liga,1,2026-08-16,Espanyol,Levante,3,0,9,7,2,2,1.5,0.35,1
@@ -122,6 +131,16 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2506247,La Liga,8,2026-10-11,Elche,Celta Vigo,0,0,8,5,2,5,1.29,0.45,1
 2506248,La Liga,8,2026-10-11,Racing de Santander,Valencia,2,2,7,13,7,3,1.42,1.08,1
 2506241,La Liga,8,2026-10-12,Levante,Sevilla,3,3,12,8,14,4,1.95,2.1,1
+2506256,La Liga,9,2026-10-16,Deportivo de A Coruña,Levante,1,1,9,4,6,5,1.4,1.01,1
+2506249,La Liga,9,2026-10-17,Valencia,Athletic Bilbao,0,0,13,3,7,2,1.92,1.05,1
+2506250,La Liga,9,2026-10-17,Villarreal,Elche,0,0,16,4,1,6,2.38,0.34,1
+2506253,La Liga,9,2026-10-17,Espanyol,Atlético Madrid,0,1,6,4,10,9,0.98,1.71,1
+2506255,La Liga,9,2026-10-17,Real Betis,Barcelona,2,5,3,3,8,10,0.52,1.46,1
+2506251,La Liga,9,2026-10-18,Málaga,Real Sociedad,2,5,12,5,12,9,1.85,1.99,1
+2506252,La Liga,9,2026-10-18,Celta Vigo,Deportivo Alavés,2,1,3,3,14,6,0.52,2.16,1
+2506254,La Liga,9,2026-10-18,Real Madrid,Sevilla,4,1,10,5,9,2,1.57,1.33,1
+2506258,La Liga,9,2026-10-18,Osasuna,Racing de Santander,2,0,16,4,1,8,2.38,0.41,1
+2506257,La Liga,9,2026-10-19,Getafe,Rayo Vallecano,1,1,4,4,3,3,0.7,0.52,1
 2489463,Ligue 1,1,2026-08-21,Marseille,Strasbourg,4,0,9,5,3,2,1.43,0.49,1
 2489464,Ligue 1,1,2026-08-22,Nice,Lorient,0,0,6,1,2,1,0.87,0.31,1
 2489466,Ligue 1,1,2026-08-22,Toulouse,Lyon,0,2,7,2,1,1,1.05,0.17,1
@@ -176,6 +195,15 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2489508,Ligue 1,6,2026-10-11,Nice,Strasbourg,2,1,10,1,4,7,1.43,0.8,1
 2489511,Ligue 1,6,2026-10-11,Rennes,Auxerre,4,1,13,8,5,7,2.09,0.94,1
 2489514,Ligue 1,6,2026-10-11,Troyes,Marseille,0,2,13,2,5,0,1.89,0.7,1
+2489524,Ligue 1,7,2026-10-16,Le Mans,Toulouse,0,3,7,4,9,4,1.12,1.4,1
+2489517,Ligue 1,7,2026-10-17,Lille,Brest,1,1,10,7,6,2,1.64,0.91,1
+2489519,Ligue 1,7,2026-10-17,Strasbourg,Paris Saint-Germain,1,3,13,3,14,4,1.92,2.1,1
+2489521,Ligue 1,7,2026-10-17,Troyes,Lens,1,3,7,5,9,4,1.15,1.4,1
+2489516,Ligue 1,7,2026-10-18,Angers,Marseille,2,5,7,4,14,7,1.12,2.2,1
+2489518,Ligue 1,7,2026-10-18,Lyon,Nice,2,1,6,2,7,5,0.91,1.15,1
+2489520,Ligue 1,7,2026-10-18,Lorient,Monaco,1,0,7,2,9,6,1.05,1.46,1
+2489522,Ligue 1,7,2026-10-18,Le Havre,Auxerre,1,3,13,2,11,2,1.89,1.61,1
+2489523,Ligue 1,7,2026-10-18,Paris FC,Rennes,4,3,14,5,7,5,2.13,1.15,1
 2494000,Premier League,1,2026-08-21,Arsenal,Coventry City,3,0,10,10,1,3,1.74,0.24,1
 2494001,Premier League,1,2026-08-22,Hull City,Manchester United,2,0,5,3,15,6,0.8,2.3,1
 2494002,Premier League,1,2026-08-22,Everton,Crystal Palace,2,0,11,5,8,3,1.71,1.22,1
@@ -236,6 +264,16 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2494054,Premier League,6,2026-10-11,Crystal Palace,Nottingham Forest,3,1,11,2,16,8,1.61,2.51,1
 2494056,Premier League,6,2026-10-11,Hull City,Everton,2,2,9,,11,,,,0
 2494059,Premier League,6,2026-10-12,Coventry City,Newcastle United,4,1,6,3,11,8,0.94,1.81,1
+2494060,Premier League,7,2026-10-17,Newcastle United,Aston Villa,0,1,11,5,11,4,1.71,1.68,1
+2494062,Premier League,7,2026-10-17,Fulham,Hull City,1,0,13,5,1,4,1.99,0.28,1
+2494063,Premier League,7,2026-10-17,Everton,Chelsea,0,2,6,,10,,,,0
+2494065,Premier League,7,2026-10-17,Manchester City,Ipswich Town,3,2,15,4,7,1,2.24,1.01,1
+2494067,Premier League,7,2026-10-17,Brentford,Liverpool,1,2,10,,10,,,,0
+2494061,Premier League,7,2026-10-18,Bournemouth,Sunderland,2,0,21,8,2,1,3.21,0.31,1
+2494066,Premier League,7,2026-10-18,Brighton and Hove Albion,Crystal Palace,5,0,8,9,4,1,1.43,0.59,1
+2494068,Premier League,7,2026-10-18,Leeds United,Manchester United,1,1,10,2,6,7,1.47,1.08,1
+2494069,Premier League,7,2026-10-18,Nottingham Forest,Arsenal,0,1,8,6,7,2,1.32,1.05,1
+2494064,Premier League,7,2026-10-19,Tottenham Hotspur,Coventry City,3,1,7,3,5,1,1.08,0.73,1
 2482138,Serie A,1,2026-08-22,Udinese,Como,1,1,10,6,13,7,1.6,2.06,1
 2482139,Serie A,1,2026-08-22,Genoa,Napoli,0,2,6,3,0,5,0.94,0.17,1
 2482144,Serie A,1,2026-08-22,Inter Milan,Monza,4,1,10,3,6,1,1.5,0.87,1
@@ -296,3 +334,13 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2482196,Serie A,6,2026-10-11,Lecce,Bologna,1,2,14,5,8,2,2.13,1.19,1
 2482193,Serie A,6,2026-10-12,Atalanta,Venezia,3,1,16,6,10,9,2.44,1.71,1
 2482194,Serie A,6,2026-10-12,Torino,Udinese,2,1,8,4,9,6,1.26,1.46,1
+2482204,Serie A,7,2026-10-16,Frosinone,Sassuolo,4,2,11,10,11,3,1.88,1.64,1
+2482201,Serie A,7,2026-10-17,Roma,Genoa,2,0,12,3,7,2,1.78,1.05,1
+2482202,Serie A,7,2026-10-17,Bologna,Inter Milan,1,3,6,5,11,6,1.01,1.74,1
+2482205,Serie A,7,2026-10-17,Venezia,Napoli,1,0,8,1,22,7,1.15,3.32,1
+2482198,Serie A,7,2026-10-18,AC Milan,Atalanta,3,2,7,4,6,6,1.12,1.04,1
+2482199,Serie A,7,2026-10-18,Udinese,Lecce,0,3,7,7,15,2,1.22,2.17,1
+2482200,Serie A,7,2026-10-18,Juventus,Lazio,0,3,5,4,5,4,0.84,0.84,1
+2482203,Serie A,7,2026-10-18,Fiorentina,Como,1,3,10,9,11,5,1.71,1.71,1
+2482206,Serie A,7,2026-10-19,Parma,Torino,0,3,13,3,6,3,1.92,0.94,1
+2482207,Serie A,7,2026-10-19,Monza,Cagliari,4,0,2,2,3,2,0.35,0.49,1
