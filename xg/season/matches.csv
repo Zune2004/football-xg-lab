@@ -112,6 +112,7 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2506225,La Liga,6,2026-09-16,Deportivo de A Coruña,Sevilla,0,1,1,3,5,6,0.24,0.9,1
 2506221,La Liga,6,2026-09-17,Málaga,Villarreal,1,3,4,1,12,4,0.59,1.82,1
 2506224,La Liga,6,2026-09-17,Real Betis,Getafe,1,0,9,13,3,5,1.7,0.59,1
+2506222,La Liga,6,2026-10-21,Levante,Athletic Bilbao,3,1,9,3,13,8,1.36,2.09,1
 2506235,La Liga,7,2026-09-18,Espanyol,Elche,1,3,13,10,6,3,2.16,0.94,1
 2506230,La Liga,7,2026-09-19,Athletic Bilbao,Deportivo Alavés,0,0,9,15,0,2,1.77,0.07,1
 2506233,La Liga,7,2026-09-19,Sevilla,Barcelona,1,3,3,4,12,12,0.56,2.09,1
