@@ -160,6 +160,7 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2506261,La Liga,10,2026-10-25,Athletic Bilbao,Getafe,4,0,6,5,4,3,1.01,0.66,1
 2506264,La Liga,10,2026-10-25,Celta Vigo,Real Betis,0,0,9,3,8,7,1.36,1.36,1
 2506266,La Liga,10,2026-10-25,Real Sociedad,Levante,2,1,14,3,4,2,2.06,0.63,1
+2506263,La Liga,10,2026-10-26,Sevilla,Osasuna,2,0,3,5,3,1,0.59,0.45,1
 2489463,Ligue 1,1,2026-08-21,Marseille,Strasbourg,4,0,9,5,3,2,1.43,0.49,1
 2489464,Ligue 1,1,2026-08-22,Nice,Lorient,0,0,6,1,2,1,0.87,0.31,1
 2489466,Ligue 1,1,2026-08-22,Toulouse,Lyon,0,2,7,2,1,1,1.05,0.17,1
@@ -231,6 +232,7 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2489528,Ligue 1,8,2026-10-25,Rennes,Strasbourg,3,0,8,7,6,6,1.36,1.04,1
 2489529,Ligue 1,8,2026-10-25,Toulouse,Troyes,0,0,6,1,2,6,0.87,0.48,1
 2489531,Ligue 1,8,2026-10-25,Auxerre,Le Mans,1,1,9,4,8,3,1.4,1.22,1
+2489533,Ligue 1,8,2026-10-26,Paris Saint-Germain,Lyon,2,0,11,6,4,4,1.74,0.7,1
 2494000,Premier League,1,2026-08-21,Arsenal,Coventry City,3,0,10,10,1,3,1.74,0.24,1
 2494001,Premier League,1,2026-08-22,Hull City,Manchester United,2,0,5,3,15,6,0.8,2.3,1
 2494002,Premier League,1,2026-08-22,Everton,Crystal Palace,2,0,11,5,8,3,1.71,1.22,1
