@@ -401,3 +401,5 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2482225,Serie A,9,2026-10-28,Venezia,Inter Milan,0,2,5,7,12,4,0.94,1.82,1
 2482226,Serie A,9,2026-10-28,Parma,Udinese,0,0,4,4,12,8,0.7,1.95,1
 2482227,Serie A,9,2026-10-28,Monza,Napoli,1,4,3,9,12,4,0.73,1.82,1
+2482222,Serie A,9,2026-10-29,Fiorentina,Atalanta,2,2,12,14,8,2,2.16,1.19,1
+2482224,Serie A,9,2026-10-29,Frosinone,Lecce,5,1,17,9,9,6,2.69,1.46,1
