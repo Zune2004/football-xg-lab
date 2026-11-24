@@ -217,6 +217,7 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2506295,La Liga,13,2026-11-22,Getafe,Atlético Madrid,0,3,6,5,10,10,1.01,1.74,1
 2506296,La Liga,13,2026-11-22,Osasuna,Málaga,1,0,9,2,4,1,1.33,0.59,1
 2506298,La Liga,13,2026-11-22,Racing de Santander,Real Sociedad,3,2,10,2,18,13,1.47,2.96,1
+2506292,La Liga,13,2026-11-23,Levante,Elche,1,1,7,11,3,1,1.35,0.45,1
 2489463,Ligue 1,1,2026-08-21,Marseille,Strasbourg,4,0,9,5,3,2,1.43,0.49,1
 2489464,Ligue 1,1,2026-08-22,Nice,Lorient,0,0,6,1,2,1,0.87,0.31,1
 2489466,Ligue 1,1,2026-08-22,Toulouse,Lyon,0,2,7,2,1,1,1.05,0.17,1
@@ -425,6 +426,7 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2494109,Premier League,11,2026-11-21,Coventry City,Crystal Palace,3,2,2,2,4,0,0.35,0.56,1
 2494102,Premier League,11,2026-11-22,Liverpool,Manchester United,4,0,19,9,4,6,2.97,0.76,1
 2494107,Premier League,11,2026-11-22,Hull City,Brighton and Hove Albion,2,0,9,2,13,2,1.33,1.89,1
+2494106,Premier League,11,2026-11-23,Brentford,Everton,4,0,17,4,2,2,2.52,0.35,1
 2482138,Serie A,1,2026-08-22,Udinese,Como,1,1,10,6,13,7,1.6,2.06,1
 2482139,Serie A,1,2026-08-22,Genoa,Napoli,0,2,6,3,0,5,0.94,0.17,1
 2482144,Serie A,1,2026-08-22,Inter Milan,Monza,4,1,10,3,6,1,1.5,0.87,1
@@ -544,3 +546,4 @@ event_id,league,round,date,home,away,home_goals,away_goals,home_in,home_out,away
 2482250,Serie A,12,2026-11-22,AC Milan,Frosinone,5,1,10,2,10,5,1.47,1.57,1
 2482253,Serie A,12,2026-11-22,Atalanta,Inter Milan,4,4,10,5,13,3,1.57,1.92,1
 2482254,Serie A,12,2026-11-22,Bologna,Udinese,1,1,16,2,9,2,2.31,1.33,1
+2482257,Serie A,12,2026-11-23,Monza,Fiorentina,3,0,11,2,9,8,1.61,1.53,1
